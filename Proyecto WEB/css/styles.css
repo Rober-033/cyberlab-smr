@@ -1,0 +1,210 @@
+/* ==========================================
+   ESTILOS GLOBALES - CYBERLAB SMR
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Fondo de Portada con transparencia y alta visibilidad */
+body.portada-bg {
+    background: linear-gradient(rgba(15, 23, 42, 0.35), rgba(15, 23, 42, 0.55)), url('../src/portada.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Encabezado superior */
+header {
+    background-color: rgba(11, 17, 32, 0.85);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(6px);
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #f1f5f9;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: #1e293b;
+    border: none;
+}
+
+/* Menú de navegación rápida */
+nav {
+    background-color: rgba(11, 17, 32, 0.85);
+    padding: 12px 0;
+    text-align: center;
+    backdrop-filter: blur(6px);
+}
+
+nav a {
+    color: #f1f5f9;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #10b981;
+}
+
+/* Contenido principal */
+main {
+    flex: 1;
+    max-width: 1000px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #f1f5f9;
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #cbd5e1;
+}
+
+/* Secciones de contenido */
+main > section {
+    background-color: rgba(15, 23, 42, 0.3);
+    padding: 35px;
+    border-radius: 10px;
+    border: 1px solid rgba(51, 65, 85, 0.4);
+    margin-bottom: 25px;
+    backdrop-filter: blur(8px);
+}
+
+/* Contenedor de doble columna (Código y Vista Previa) por defecto */
+.code-preview-container {
+    display: flex;
+    gap: 20px;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.pane {
+    flex: 1;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.pane-code {
+    background-color: #0f172a;
+}
+
+.pane-preview {
+    background-color: #090d16;
+    border: 1px solid #334155;
+}
+
+.pane h3 {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+}
+
+pre {
+    color: #34d399;
+    font-family: Consolas, monospace;
+    font-size: 0.85rem;
+    overflow-x: auto;
+}
+
+/* Pie de página */
+footer {
+    background-color: rgba(11, 17, 32, 0.85);
+    padding: 20px 40px;
+    margin-top: auto;
+    backdrop-filter: blur(6px);
+}
+
+.footer-content {
+    text-align: right;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #94a3b8;
+}
+
+.footer-content a {
+    color: #10b981;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   MEDIA QUERIES - DISEÑO RESPONSIVE (MÓVILES)
+   ========================================== */
+@media screen and (max-width: 768px) {
+    /* Adaptar la cabecera a una columna */
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 15px 20px;
+    }
+
+    /* Convertir el menú en flexible para que los enlaces se organicen sin romperse */
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 16px;
+        padding: 10px 15px;
+    }
+
+    /* Quitamos los márgenes laterales antiguos para que el gap de flex controle el espacio */
+    nav a {
+        margin: 0;
+        font-size: 0.85rem;
+    }
+
+    /* Apilar el contenedor de doble columna en vertical (código arriba, preview abajo) */
+    .code-preview-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    /* Reducir padding de las secciones principales en pantallas pequeñas */
+    main > section {
+        padding: 20px;
+    }
+}

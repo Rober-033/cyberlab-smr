@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a CSS - CyberLab SMR</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Encabezado superior con Logotipo -->
+    <header>
+        <div class="logo-container" style="display: flex; align-items: center; gap: 12px;">
+            <span style="font-size: 1.8rem;">🌐</span>
+            <div>
+                <div class="logo">CyberLab SMR</div>
+                <div style="font-size: 0.75rem; color: #94a3b8; letter-spacing: 1px;">MODULAR PORTAL</div>
+            </div>
+        </div>
+        <div style="font-size: 0.9rem; color: #94a3b8; font-weight: 600;">Curso 2026/2027</div>
+    </header>
+    <hr class="divider">
+
+    <!-- Menú de navegación rápida -->
+    <nav>
+        <a href="index.html">Portada</a>
+        <a href="indice.html">Índice</a>
+        <a href="teoria.html">Fundamentos HTML</a>
+        <a href="css.html">Introducción CSS</a>
+    </nav>
+    <hr class="divider">
+
+    <!-- Contenido Principal: Introducción a CSS -->
+    <main>
+        <section>
+            <h2>Módulo 2: Introducción a CSS</h2>
+            <p>CSS se encarga de dar diseño, color y distribución visual a nuestra página web. Las reglas se aplican mediante selectores vinculados a una hoja de estilos externa (<code>style.css</code>).</p>
+
+            <!-- SECCIÓN 1: Selectores (ID y Clases) -->
+            <h3 id="selectores" style="color: #34d399; margin-top: 30px; margin-bottom: 10px;">1. Selectores (ID vs Clases)</h3>
+            <p>Los identificadores (<code>#id</code>) se usan para elementos únicos, mientras que las clases (<code>.class</code>) permiten reutilizar estilos en varios elementos.</p>
+            
+            <div class="code-preview-container">
+                <div class="pane pane-code">
+                    <h3>Código Fuente (CSS)</h3>
+                    <pre>/* Selector por ID */
+#titulo-principal {
+  color: red;
+}
+
+/* Selector por Clase */
+.texto-destacado {
+  color: blue;
+}</pre>
+                </div>
+                <div class="pane pane-preview">
+                    <h3>Vista Previa</h3>
+                    <div style="padding: 10px; background: #0f172a; border-radius: 4px;">
+                        <p id="titulo-principal" style="color: red; margin-bottom: 5px; font-weight: bold;">Texto con ID (#titulo-principal)</p>
+                        <p class="texto-destacado" style="color: blue; margin: 0;">Texto con Clase (.texto-destacado)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 2: Propiedades de Fondo -->
+            <h3 id="fondos" style="color: #34d399; margin-top: 30px; margin-bottom: 10px;">2. Propiedades de Fondo (Background)</h3>
+            <p>Permiten controlar colores, imágenes de fondo, repetición, tamaño (<code>cover</code>) y posición de forma avanzada.</p>
+            
+            <div class="code-preview-container">
+                <div class="pane pane-code">
+                    <h3>Código Fuente (CSS)</h3>
+                    <pre>.caja-fondo {
+  background-color: #1e293b;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}</pre>
+                </div>
+                <div class="pane pane-preview">
+                    <h3>Vista Previa</h3>
+                    <div style="background-color: #1e293b; padding: 15px; border-radius: 4px; border: 1px solid #334155; text-align: center;">
+                        <span style="color: #f1f5f9; font-size: 0.9rem;">Caja con fondo estilizado</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 3: Tipografía y Texto -->
+            <h3 id="tipografia" style="color: #34d399; margin-top: 30px; margin-bottom: 10px;">3. Estilos de Texto y Fuentes</h3>
+            <p>Podemos modificar la familia de la fuente, el tamaño, el grosor (<code>bold</code>), el estilo (<code>italic</code>) y la alineación.</p>
+            
+            <div class="code-preview-container">
+                <div class="pane pane-code">
+                    <h3>Código Fuente (CSS)</h3>
+                    <pre>.estilo-texto {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}</pre>
+                </div>
+                <div class="pane pane-preview">
+                    <h3>Vista Previa</h3>
+                    <div style="padding: 10px; background: #0f172a; border-radius: 4px; text-align: center; font-weight: bold; color: #34d399;">
+                        Texto en negrita y centrado
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 4: Organización con Flexbox -->
+            <h3 id="flexbox" style="color: #34d399; margin-top: 30px; margin-bottom: 10px;">4. Distribución (Flexbox)</h3>
+            <p>Activando <code>display: flex;</code> podemos organizar los elementos en filas (<code>row</code>) o columnas (<code>column</code>) de manera flexible.</p>
+            
+            <div class="code-preview-container">
+                <div class="pane pane-code">
+                    <h3>Código Fuente (CSS)</h3>
+                    <pre>.contenedor-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}</pre>
+                </div>
+                <div class="pane pane-preview">
+                    <h3>Vista Previa</h3>
+                    <div style="display: flex; flex-direction: row; gap: 10px; background: #0f172a; padding: 10px; border-radius: 4px;">
+                        <div style="background: #1e293b; padding: 8px; flex: 1; text-align: center; font-size: 0.8rem;">Caja 1</div>
+                        <div style="background: #1e293b; padding: 8px; flex: 1; text-align: center; font-size: 0.8rem;">Caja 2</div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Pie de página (Footer) -->
+    <hr class="divider">
+    <footer>
+        <div class="footer-content">
+            <p><strong>CyberLab SMR — Cuaderno Intermodular</strong></p>
+            <p>Autor: Roberto Orellana Garcia</p>
+            <p>Fecha de creación: Octubre 2026</p>
+            <p>Enlace de interés: <a href="https://www.edu.xunta.gal" target="_blank">Portal Educativo SMR</a></p>
+            <p>Licencia: Creative Commons BY-NC 4.0</p>
+        </div>
+    </footer>
+
+</body>
+</html>
